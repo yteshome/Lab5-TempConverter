@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>Fahrenheit to Celcius Temperature Converter</title>
+<body>
+
+  <h2>Temperature Converter</h2>
+  <p>Type a value in the Fahrenheit field to convert the value to Celcius:</p>
+
+  <p>
+    <label>Fahrenheit</label>
+    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="fahrenheitConverter(this.value)" onchange="fahrenheitConverter(this.value)">
+  </p>
+  <p>Celcius: <span id="outputCelcius"></span></p>
+  <p>is the converted value of a Fahrenheit</p>
+
+  <p>
+    <label>Celcius</label>
+    <input id="inputCelcius" type="number" placeholder="Celcius" oninput="celciusConverter(this.value)" onchange="celciusConverter(this.value)">
+  </p>
+  <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+  <p>is the converted value of a Celcius</p>
+
+  <script>
+  function fahrenheitConverter(valNum) {
+    valNum = parseInt(valNum);
+    document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+    function celciusConverter(valNum) {
+      valNum = parseInt(valNum);
+      document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+    }
+    </script>
+    </body>
+    </html>
